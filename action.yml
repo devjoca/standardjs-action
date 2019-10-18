@@ -1,6 +1,9 @@
 name: 'standardjs-ga'
 description: 'Auto commit with standardjs fix'
 author: 'jopereyral'
+branding:
+  icon: 'check-circle'
+  color: 'black'
 runs:
   using: 'docker'
   image: 'Dockerfile'
