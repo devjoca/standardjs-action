@@ -17,5 +17,5 @@ jobs:
     - name: StandardJs
       uses: docker://jopereyral/standardjs-action
       with:
-      args: --fix
+        args: --fix
 ```
