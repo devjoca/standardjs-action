@@ -1,5 +1,21 @@
-# Container Action Template
+# StandardJS Github Action
 
-To get started, click the `Use this template` button on this repository [which will create a new repository based on this template](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/).
+## Usage
 
-For info on how to build your first Container action, see the [toolkit docs folder](https://github.com/actions/toolkit/blob/master/docs/container-action.md).
+You can use it as a Github Action like this:
+
+_.github/workflows/lint.yml_
+```
+on: [push, pull_request]
+name: Main
+jobs:
+  standardjs:
+    name: StandardJs
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: StandardJs
+      uses: docker://jopereyral/standardjs-action
+      with:
+      args: --fix
+```
