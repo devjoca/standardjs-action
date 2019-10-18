@@ -1,9 +1,15 @@
 name: 'standardjs-ga'
-description: 'Auto commit with standardjs fix'
 author: 'jopereyral'
-branding:
-  icon: 'check-circle'
-  color: 'black'
+description: 'Auto commit with standardjs fix'
+inputs:
+  args:  # id of input
+    description: 'args to standardjs'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.args }}
+
+branding:
+  icon: 'check-circle'
+  color: 'black'
